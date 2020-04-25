@@ -8,6 +8,11 @@ from access.conf import auth_uri
 
 @app.route('/pauth')
 def index():
+	"""
+	To make the session survive
+	browser closing, it shoud be made permenent
+	"""
+	session.parmenent = True
 	if 'access_token' in session and AccessToken.is_valid(session.get('access_token')):
 		response_payload = UserInfo(session.get('access_token')).get()
 		return render_template('index.html', authorized=True, 
