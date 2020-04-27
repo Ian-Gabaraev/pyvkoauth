@@ -52,5 +52,4 @@ class UserInfo:
 			'friends': self.user_friends,
 		}
 		return result
-
-# print(UserInfo('7f160d5ec7fb1d89183afeff163e7f582629bbb954dde5c114fedcb4109d0b9128768cd933605ce423efd').get())
+	
