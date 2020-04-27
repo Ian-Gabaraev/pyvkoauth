@@ -23,7 +23,7 @@ def index():
 
 
 @app.route('/pauth/reg')
-def applicatio():
+def application():
 	code = request.args.get('code', type=str)
 	access_token = AccessToken.get(code)
 	session['access_token'] = access_token
